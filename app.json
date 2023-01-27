@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "copy-favplaces",
-    "slug": "copy-favplaces",
+    "name": "favplaces",
+    "slug": "favplaces",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -18,16 +18,35 @@
       "**/*"
     ],
     "ios": {
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.thegera.copy_favplaces"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "The app needs access to your camera in order to take pictures of your favorite places."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7ec0a631-16d4-4513-8569-6f4aa0215228"
+      }
     }
   }
 }
